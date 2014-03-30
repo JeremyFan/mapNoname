@@ -2,7 +2,39 @@
 <head>
 	<title>start</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="../styles/home.css" type="text/css">
+	<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
 </head>
 <body>
-	Hi, let us start!
+	<header class="hd">
+		<div class="searcher">
+			<input class="searchbox" type="text" placeholder="搜点儿什么吧" />
+			<button class="btn-search" type="button">搜索</button>
+		</div>
+	</header>
+	<aside class="aside">
+		<header class="aside-hd">
+		</header>
+		<p class="title">
+			校园周边
+		</p>
+		<div class="nearby">
+
+		</div>
+		<p class="title">
+			留言板
+		</p>
+		<div class="sounds">
+
+		</div>
+	</aside>
+	<div class="main">
+		<div class="main-c" id="mapContainer">
+		</div>
+	</div>
+	<script type="text/javascript"> 
+		var map = new BMap.Map("mapContainer");          // 创建地图实例  
+		var point = new BMap.Point(116.404, 39.915);  // 创建点坐标  
+		map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别  
+	</script>  
 </body>
